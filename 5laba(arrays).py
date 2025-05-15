@@ -63,20 +63,30 @@
 #невозрастанию. Если упорядочены, то найти минимальный элемент. В противном случае
 #определить номера первой пары элементов, для которых выполнилось соотношение
 #Вi.<Bi+1.
-arr=[10,9,8,7,6,10,11,4,3,2,1]
-nums=[]
-ifSorted=True
-for i in range(len(arr)-1):
-    if arr[i]<arr[i+1]:
-        ifSorted=False
-        nums.append((i, i+1))
-        break
-    if ifSorted:
-        if minValue<arr[i]:
-            minValue=arr[i]
-if ifSorted:
-    minValue=arr[-1]
-    print(f"{minValue} - minimal value")
-else:
-    for num in nums:
-        print(f"The first pair breaks the rule: {num}")
+# arr=[10,9,8,7,6,10,11,4,3,2,1]
+# nums=[]
+# ifSorted=True
+# for i in range(len(arr)-1):
+#     if arr[i]<arr[i+1]:
+#         ifSorted=False
+#         nums.append((i, i+1))
+#         break
+#     if ifSorted:
+#         if minValue<arr[i]:
+#             minValue=arr[i]
+# if ifSorted:
+#     minValue=arr[-1]
+#     print(f"{minValue} - minimal value")
+# else:
+#     for num in nums:
+#         print(f"The first pair breaks the rule: {num}")
+
+# развернуть массив [3,2,1] -> [1,2,3]
+
+arr=[3,2,1]
+
+for i in range(len(arr)):
+    temp=arr[i]
+    arr[i]=arr[(-1)*i]
+    arr[(-1)*i]=temp
+print(arr)

@@ -96,7 +96,7 @@ while l<k:
 print("\n ======================== \nЗадача 7.3. Cоздать одномерный массив D(n), в который занести количество отрицательных чисел в каждом столбце матрицы A(n,m).")
 
 A=[
-    [1, -3, 5, 7],
+    [1, -3, -3, 1],
     [2, 4, 5, 1],
     [5, -3, 6, -7]
 ]
@@ -109,3 +109,68 @@ for i in range(n):
         if A[i][j]<0:
             d[j]+=1
 print(f"Ответ: {d}\n")
+
+print("========")
+# Найти и отпечатать симметричную строку
+# матрицы. Если такой нет, то выдать сообщение
+A=[
+    [1,2,0],
+    [4,8,2],
+    [4,5,6]
+]
+found = False
+
+for row in A:
+    is_symmetric=True
+    for j in range(len(row) // 2):
+        if row[j] != row[-1 - j]:
+            is_symmetric = False
+            break
+        if is_symmetric:
+            print(f"Symmetric row: {row}")
+            found=True
+if not found:
+    print("Not found")
+
+print("============")
+# Найти и отпечатать строку матрицы, элементы
+# которой образуют возрастающую
+# последовательность.     
+print("Найти и отпечатать строку матрицы, элементы которой образуют возрастающую п оследовательность")
+matrix=[
+    [1,2,3],
+    [4,8,2],
+    [4,5,6]
+] 
+rows=[]
+
+for i in range(len(matrix)):
+    found=True
+    for j in range(len(matrix[0])-1):
+        if matrix[i][j]>matrix[i][j+1]:
+            found=False
+            break
+    if found:
+        rows.append(i)
+
+for num in rows:
+    print(matrix[num])
+
+print("======== ")
+
+# Записать элементы каждого столбца матрицы в
+# обратном порядке
+
+matrix= [
+    [9,8,7],
+    [6,5,4],
+    [3,2,1]
+]
+
+for i in range(len(matrix)):
+    matrix[i].reverse()
+
+for i in range(len(matrix)):
+    for j in range(len(matrix[0])):
+        print(f"{matrix[i][j]}", end=" ")
+    print()
