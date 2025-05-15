@@ -85,8 +85,5 @@
 
 arr=[3,2,1]
 
-for i in range(len(arr)):
-    temp=arr[i]
-    arr[i]=arr[(-1)*i]
-    arr[(-1)*i]=temp
+arr.reverse()
 print(arr)
