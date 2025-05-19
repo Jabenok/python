@@ -1,16 +1,16 @@
 # # Числа в массиве имеют значения 0,1,…,9. Отпечатать все пары элементов
 # # массива и их индексы, находящиеся рядом и имеющие одинаковые значения, то есть пары
 # # =Xi+1 в порядке возрастания.
-# arr=[0,1,2,3,3,4,5,6,6,7,8,8,9]
-# pairs=[]
-# for i in range(len(arr)-1):
-#     if arr[i]==arr[i+1]:
-#         pairs.append((i, i+1, arr[i]))
-#
-# pairs.sort()
-#
-# for pair in pairs:
-#     print(f"Индексы: {pair[0]} и {pair[1]}, значения: {pair[2]}")
+arr=[0,1,2,3,3,4,5,6,6,7,8,8,9]
+pairs=[]
+for i in range(len(arr)-1):
+    if arr[i]==arr[i+1]:
+        pairs.append((i, i+1, arr[i]))
+
+pairs.sort()
+
+for pair in pairs:
+    print(f"Индексы: {pair[0]} и {pair[1]}, значения: {pair[2]}")
 
 # arr=[0,1,2,10,4,5,6,7,8,9]
 #
@@ -83,7 +83,7 @@
 
 # развернуть массив [3,2,1] -> [1,2,3]
 
-arr=[3,2,1]
-
-arr.reverse()
-print(arr)
+# arr=[3,2,1]
+#
+# arr.reverse()
+# print(arr)
